@@ -4,8 +4,7 @@
 # perform a louvain cluster on the subgraph induced by that list
 # return a dictionary of categories to occupations
 
-
-from networkx.algorithms import community, components
+from networkx.algorithms import community
 from community import community_louvain
 
 from cw_test_project.pipeline.make_graph import make_graph
@@ -47,6 +46,7 @@ def split_deeper(dictionary, k=1) -> dict:
 
 split_4levels = split_deeper(split_1level, k=3)
 
+# test change
 
 # TESTING
 # print(split_4levels[0])
