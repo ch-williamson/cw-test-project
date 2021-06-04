@@ -8,7 +8,7 @@ from cw_test_project.pipeline.make_cluster_dictionary import split_4levels
 from cw_test_project.getters.occupations_skills import get_occupations
 
 
-flat_dict = pd.json_normalize(split_4levels, max_level=4, sep="")
+# flat_dict = pd.json_normalize(split_4levels, max_level=4, sep=", ")
 
 flat_dict = {}
 
