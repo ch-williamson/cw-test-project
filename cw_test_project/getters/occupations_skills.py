@@ -41,3 +41,6 @@ def get_mapping() -> dict:
 # TESTING
 # test_data = get_occupations()
 # print(test_data.head())
+
+
+# adding a comment here to test committing on vscode
