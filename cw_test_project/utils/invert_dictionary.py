@@ -1,5 +1,6 @@
-# utils(?)
-# invert_dictionary.py
+# File: utils/invert_dictionary.py
+"""Tool to invert a dictionary.
+"""
 
 
 def invert_dictionary(dictionary) -> dict:

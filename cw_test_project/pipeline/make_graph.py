@@ -1,4 +1,7 @@
-# pipeline - forming a graph
+# File: pipeline/make_graph.py
+"""Takes the dictionary built in pipeline/generate_dictionary.py and forms
+a graph to encode the similarities between skills required by occupations.
+"""
 
 import networkx as nx
 

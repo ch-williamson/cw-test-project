@@ -1,8 +1,7 @@
-# make_cluster_dictionary.py
-
-# for a given list of occupations,
-# perform a louvain cluster on the subgraph induced by that list
-# return a dictionary of categories to occupations
+# File: pipeline/make_cluster_dictionary.py
+"""Takes the graph built in pipeline/make_graph.py and applies
+the Louvain clustering algorithm to obtain a hierarchy of occupations.
+"""
 
 from networkx.algorithms import community
 from community import community_louvain
@@ -46,7 +45,6 @@ def split_deeper(dictionary, k=1) -> dict:
 
 split_4levels = split_deeper(split_1level, k=3)
 
-# test change
 
 # TESTING
 # print(split_4levels[0])

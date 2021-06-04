@@ -1,4 +1,7 @@
-# pipeline - data cleaning
+# File: pipeline/generate_dictionary.py
+"""Restructures and extracts useful data from the full datasets
+obtained in getters/occupations_skills.py.
+"""
 
 from cw_test_project.getters.occupations_skills import get_occupations, get_mapping
 
