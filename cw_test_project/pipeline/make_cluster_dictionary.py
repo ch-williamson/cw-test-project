@@ -5,6 +5,7 @@ the Louvain clustering algorithm to obtain a hierarchy of occupations.
 
 from networkx.algorithms import community
 from community import community_louvain
+import json
 
 from cw_test_project.pipeline.make_graph import make_graph
 from cw_test_project.utils.invert_dictionary import invert_dictionary
@@ -45,6 +46,8 @@ def split_deeper(dictionary, k=1) -> dict:
 
 split_4levels = split_deeper(split_1level, k=3)
 
+with open("../../outputs/data/classification.json", "w") as fp:
+    json.dump(split_4levels, fp, indent=4)
 
 # TESTING
 # print(split_4levels[0])
