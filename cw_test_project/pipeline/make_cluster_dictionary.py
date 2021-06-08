@@ -34,19 +34,17 @@ def split_deeper(dictionary, k=1) -> dict:
     Returns: A dictionary classifying occupations into a hierarchy with k+1 levels.
     """
     split_dictionary = {}
-
     for i in dictionary.keys():
         subgraph = full_graph.subgraph(dictionary[i])  # the induced subgraph
         split_dictionary[i] = apply_louvain(subgraph)
         if k > 1:
             split_dictionary[i] = split_deeper(split_dictionary[i], k - 1)
-
     return split_dictionary
 
 
 split_4levels = split_deeper(split_1level, k=3)
 
-with open("../../outputs/data/classification.json", "w") as fp:
+with open("./outputs/data/classification.json", "w") as fp:
     json.dump(split_4levels, fp, indent=4)
 
 # TESTING
