@@ -7,6 +7,8 @@ Data source: email correspondence
 import pandas as pd
 import json
 
+from cw_test_project import PROJECT_DIR
+
 
 def get_occupations() -> pd.DataFrame:
     """Load occupation table.
@@ -15,7 +17,7 @@ def get_occupations() -> pd.DataFrame:
     and their associated ISCO codes.
     """
 
-    return pd.read_csv("./inputs/data/occupations_en.csv")
+    return pd.read_csv(f"{PROJECT_DIR}/inputs/data/occupations_en.csv")
 
 
 def get_skills() -> pd.DataFrame:
@@ -24,7 +26,7 @@ def get_skills() -> pd.DataFrame:
     Returns: DataFrame with information about skills.
     """
 
-    return pd.read_csv("./inputs/data/skills_en.csv")
+    return pd.read_csv(f"{PROJECT_DIR}/inputs/data/skills_en.csv")
 
 
 def get_mapping() -> dict:
@@ -34,7 +36,7 @@ def get_mapping() -> dict:
     Associated information includes skills.
     """
 
-    with open("./inputs/data/ESCO_occup_skills.json") as json_file:
+    with open(f"{PROJECT_DIR}/inputs/data/ESCO_occup_skills.json") as json_file:
         return json.load(json_file)
 
 
